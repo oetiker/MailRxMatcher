@@ -5,7 +5,7 @@ AC_PREREQ([2.59])
 AC_CONFIG_AUX_DIR(conftools)
 
 MJ_CLASS=MailRxMatcher
-MJ_SCRIPT=mail-rx-match
+MJ_SCRIPT=mail-rx-matcher
 
 AC_SUBST(MJ_CLASS)
 AC_SUBST(MJ_SCRIPT)

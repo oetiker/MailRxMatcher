@@ -1,3 +1,7 @@
+0.2.0 2019-11-22  Tobias Oetiker (tobi@oetiker.ch)
+
+- detect rxes that match everything
+
 0.0.0 2019-11-19  Tobias Oetiker (tobi@oetiker.ch)
 
 - started project
