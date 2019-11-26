@@ -28,7 +28,8 @@ my $email = Email::MIME->new($msg);
 my @matchers = map { decode($charset,$_) } @ARGV;
 
 for (@matchers) {
-   die "Regular Expression '$_' matches everything\n" if 'asdfl;kjasdflkjaf98yp43rhoiu;adlksfjnbsdf' ~= /$_/;
+   die "Regular Expression '$_' matches everything\n" 
+    if 'asdfl;kjasdflkjaf98yp43rhoiu;adlksfjnbsdf' =~ /$_/;
 }
 
 $printbody = 1 unless @matchers;
@@ -124,4 +125,3 @@ Tobias Oetiker E<lt>tobi@oetiker.chE<gt>
 
 L<Email::MIME>, L<HTML::Entities>, L<HTML::FormatText>
 
-__END__
