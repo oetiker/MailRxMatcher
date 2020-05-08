@@ -34,6 +34,14 @@ for (@matchers) {
 
 $printbody = 1 unless @matchers;
 
+for my $matcher (@matchers) {
+  if ($email->header_str('Subject') =~ /$matcher/i){
+     print $onmatch;
+     exit 0;
+  }
+}
+
+
 $email->walk_parts(sub {
     my ($part) = @_;
     return if $part->subparts; # multipart
