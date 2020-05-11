@@ -56,7 +56,7 @@ $email->walk_parts(sub {
         }
         print encode($charset,$body) if $printbody;
         for my $matcher (@matchers) {
-            if ($body =~ /$matcher/){
+            if ($body =~ m{$matcher}is){
                 print $onmatch;
                 exit 0;
            }
